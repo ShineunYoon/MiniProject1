@@ -1,8 +1,10 @@
 User Stories
 
-1.
-2.
-3.
-4.
-5.
-6.
+1. I, as user, would like to find Likes/Dislike of the certain product
+2. I, as user, would like to know the specific details on the size of the product (ex, runs small, runs big, and etc.) 
+3. I, as user, want to know the list of products that are popular among people on social media, especially Twitter.
+4. I, as user, want to know the options on the color of the product.
+5. As an user, I would like to keep updated with information on new or limited time products.
+6. As a director of the Nike (likely to be changed to Shoe Company), I need to know the fashion trends of the shoes.
+7. As a director of the Nike, I need to find the Likes/Dislikes of the certain product to give an insight of the way of changes.
+8. As a director of competitor firm, I need to know strengthes and weakness of the product for the further improvements.
