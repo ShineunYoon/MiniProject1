@@ -53,10 +53,10 @@ html {
   font-family: 'Oswald', sans-serif;
   margin: 0px;
   padding: 0px;
-  color: black;
 }
 
 body {
+  background-color: #051C3B;
   margin: 0px;
   padding: 0px;
 }
@@ -69,8 +69,9 @@ h1 {
   text-align: center;
   padding-top: 3.5em;
   padding-bottom: 0em;
-  color: #333300;
+  color: white;
   font-style: bold;
+  text-shadow: -1px 0 #3E85CB, 0 2px #3E85CB, 2px 0 #3E85CB, 0 -1px #3E85CB;
 }
 
 h2 {
@@ -78,7 +79,7 @@ h2 {
   font-size: 1.3em;
   color: white;
   line-height: 1.2731em;
-  padding-bottom: 12.6em;
+  padding-bottom: 3.5em;
   text-align: center;
 }
 
@@ -107,11 +108,6 @@ ul {
 a {
   text-decoration: none;
   background-color: transparent;
-  color: black;
-}
-
-ul li a {
-  color: black;
 }
 
 /*==================MODULAR STYLES==================*/
@@ -122,30 +118,29 @@ header {
   top,left: 0; 
   width: 100%; 
   border:0;
-  background-image: url("../src/img/header_img.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: black; 
-  color: white;
 }
 
 section {
-  margin-top: 3.024em;
-  margin-bottom: 3.024em;
+  margin-top: 0.3125em;
+  margin-bottom: 0.3125em;
   padding-top: 0.3125em;
   padding-bottom: 0.3125em;
-  background-color: white; 
   font-family: 'Oswald', sans-serif;
 }
 
 article {
+  margin-left: 6.048em;
+  margin-right: 6.048em;
   padding-left: 0.64876em;
   padding-right: 0.64876em;
+  background-color: #3E85CB;
 }
 
 footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   padding: 0.3125em 0.625em 0.3125em 0.625em;
   background-color: black; 
