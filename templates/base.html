@@ -12,8 +12,29 @@
 <body>
 <h1>Shoepper</h1>
 <main id="main"> 
+  <section id="GoogleNL">
+    <h2>Your Faves</h2>
+    <article class="article">
+      <div class="container">
+        <form action="" method="post">
+          <div class="bt-wrapper">
+            <input type="radio" name="Nike" id="bt-nike" class="hidden r-label" value="nike" checked>
+            <label for="bt-nike" class="bt-label"><h3>NIKE</h3></label>
+            <input type="radio" name="Adidas" id="bt-adidas" class="hidden r-label" value="adidas" >
+            <label for="bt-adidas" class="bt-label"><h3>ADIDAS</h3></label>
+            <input type="radio" name="Puma" id="bt-puma" class="hidden r-label" value="puma">
+            <label for="bt-puma" class="bt-label"><h3>PUMA</h3></label>
+            <input type="radio" name="Reebok" id="bt-reebok" class="hidden r-label" value="reebok">
+            <label for="bt-reebok" class="bt-label"><h3>REEBOK</h3></label>
+          </div>
+          <center><input type="submit" value="submit"></center>
+        </form>
+       
+      </div>
+    </article>
+  </section>
   <section id="Twitter">
-    <h2>Twitter Feeds</h2>
+    <h2>What's New</h2>
     <article class="article">
       {% block article %} {% endblock %}
     </article>
