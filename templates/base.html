@@ -5,7 +5,7 @@
   <!--Responsive Web-->
   <meta name="viewport" content="width=device-width,intial-scale=1.0,shrink-to-fit=no"/>
   <!--CSS-->
-  <link rel="stylesheet" type="text/css" media="screen" href="../static/css/screen.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static',filename='screen.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Racing+Sans+One&display=swap" rel="stylesheet">
   <title>Home</title>
 </head>
@@ -16,20 +16,7 @@
     <h2>Your Faves</h2>
     <article class="article">
       <div class="container">
-        <form action="" method="post">
-          <div class="bt-wrapper">
-            <input type="radio" name="Nike" id="bt-nike" class="hidden r-label" value="nike" checked>
-            <label for="bt-nike" class="bt-label"><h3>NIKE</h3></label>
-            <input type="radio" name="Adidas" id="bt-adidas" class="hidden r-label" value="adidas" >
-            <label for="bt-adidas" class="bt-label"><h3>ADIDAS</h3></label>
-            <input type="radio" name="Puma" id="bt-puma" class="hidden r-label" value="puma">
-            <label for="bt-puma" class="bt-label"><h3>PUMA</h3></label>
-            <input type="radio" name="Reebok" id="bt-reebok" class="hidden r-label" value="reebok">
-            <label for="bt-reebok" class="bt-label"><h3>REEBOK</h3></label>
-          </div>
-          <center><input type="submit" value="submit"></center>
-        </form>
-       
+        {% block form %}{% endblock %}
       </div>
     </article>
   </section>
