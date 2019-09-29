@@ -22,13 +22,12 @@ def analyze(tweet_result):
     for index, line in enumerate(analysis.sentences):
       line_score = line.sentiment.score
       accumulative = accumulative + line_score
-      print('Line {} has a sentiment score of {}'.format(index, line_score))
 
-    result = (accumulative/magnitude) * 100
+    reliability = (accumulative/magnitude) * 100
+    
     print('Overall Sentiment: score of {} with magnitude of {}'.format(score, magnitude))
-    print('Overall Result: {} %'.format(result))
+    print('Overall Reliability: {} %'.format(result))
     return 0
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__,formatter_class=argparse.RawDescriptionHelpFormatter)
