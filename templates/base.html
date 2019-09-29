@@ -7,10 +7,13 @@
   <!--CSS-->
   <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static',filename='screen.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Oswald|Racing+Sans+One&display=swap" rel="stylesheet">
-  <title>Home</title>
+  <title>Shoepper</title>
 </head>
 <body>
-<h1>Shoepper</h1>
+<figure>
+  <center><img src="{{ url_for('static',filename='logo_300.png') }}" alt="shoepper_logo"></center>
+
+</figure>
 <main id="main"> 
   <section id="GoogleNL">
     <h2>Your Faves</h2>
@@ -18,12 +21,6 @@
       <div class="container">
         {% block form %}{% endblock %}
       </div>
-    </article>
-  </section>
-  <section id="Twitter">
-    <h2>What's New</h2>
-    <article class="article">
-      {% block article %} {% endblock %}
     </article>
   </section>
 </main>

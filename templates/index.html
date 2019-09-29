@@ -5,19 +5,3 @@
 <p>Testing</p>
 {% endblock %}
 
-{% block form %}
-<form action="" method="post">
-  <div class="bt-wrapper">
-    <!--option = request.form['nike']-->
-    <input type="radio" name="option" id="bt-nike" class="hidden r-label" value="nike" checked>
-    <label for="bt-nike" class="bt-label"><h3>NIKE</h3></label>
-    <input type="radio" name="option" id="bt-adidas" class="hidden r-label" value="adidas" >
-    <label for="bt-adidas" class="bt-label"><h3>ADIDAS</h3></label>
-    <input type="radio" name="option" id="bt-puma" class="hidden r-label" value="puma">
-    <label for="bt-puma" class="bt-label"><h3>PUMA</h3></label>
-    <input type="radio" name="option" id="bt-reebok" class="hidden r-label" value="reebok">
-    <label for="bt-reebok" class="bt-label"><h3>REEBOK</h3></label>
-    <center><input type="submit" id="bt-submit" value="submit"></center>
-  </div>
-</form>
-{% endblock %}
