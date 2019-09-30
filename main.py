@@ -15,11 +15,11 @@ def form():
 def index():
     choice = request.form['option']
     # First Long-term Analysis
-    twitter_sentiment_analysis.get_tweets(choice, 20)
+    twitter_sentiment_analysis.get_tweets(choice, 50)
     result1 = sentiment_analysis.analyze("tweet.text")
 
     # Second Short-term analysis
-    twitter_sentiment_analysis.get_tweets(choice, 5)
+    twitter_sentiment_analysis.get_tweets(choice, 10)
     result2 = sentiment_analysis.analyze("tweet.text")
 
     # Overall Score
