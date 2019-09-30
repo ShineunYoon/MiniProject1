@@ -10,13 +10,14 @@
   <title>Shoepper</title>
 </head>
 <body>
-<figure>
-  <center><img src="{{ url_for('static',filename='logo_300.png') }}" alt="shoepper_logo"></center>
-
-</figure>
+<header>
+  <figure>
+    <center><img src="{{ url_for('static',filename='logo_300.png') }}" alt="shoepper_logo"></center>
+  </figure>
+</header>
 <main id="main"> 
   <section id="GoogleNL">
-    <h2>Your Faves</h2>
+    <h1>Your Faves</h1>
     <article class="article">
       <div class="container">
         {% block div %}{% endblock %}
@@ -25,10 +26,10 @@
     </article>
   </section>
 </main>
-<footer id="footer">
-  <p>
-    EC601 A2 Product Design in Electrical and Computer Engineering<br/> Go to <a href="#header">Top</a>
-  </p>
-</footer>
+<!--<footer id="footer">-->
+<!--  <p>-->
+<!--    EC601 A2 Product Design in Electrical and Computer Engineering<br/> Go to <a href="#header">Top</a>-->
+<!--  </p>-->
+<!--</footer>-->
 </body>
 </html>

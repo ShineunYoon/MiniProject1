@@ -1,17 +1,14 @@
-import argparse
-import sys
-
 from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
 
 
-def analyze(tweet_result):
+def analyze(*args):
     accumulative = 0
 
     client = language.LanguageServiceClient()
 
-    with open(tweet_result, 'r') as tweets:
+    with open(args[0], 'r') as tweets:
         content = tweets.read()
 
     document = types.Document(content=content, type=enums.Document.Type.PLAIN_TEXT)
@@ -22,29 +19,21 @@ def analyze(tweet_result):
 
     for index, line in enumerate(analysis.sentences):
         line_score = line.sentiment.score
-        accumulative =accumulative + line_score
+        accumulative = accumulative + line_score
 
-    reliability = (accumulative / magnitude) * 100
+    emotion = (accumulative / magnitude) * 100
 
     print('Overall Sentiment: score of {} with magnitude of {}'.format(accumulative, magnitude))
-    how_reliable = reliability_checker(reliability);
-    return how_reliable
+    comment = scorer(emotion);
+    return comment
 
 
-def reliability_checker(reliability):
-    if reliability < 20:
-        return "Unreliable"
-    elif 20 <= reliability < 50:
-        return "Low Reliability"
-    elif 50 <= reliability < 80:
-        return "Possibly True"
+def scorer(emotion):
+    if emotion < 20:
+        return "Terrible"
+    elif 20 <= emotion < 50:
+        return "Think once again"
+    elif 50 <= emotion < 80:
+        return "Sounds good"
     else:
-        return "Truly Believable"
-
-
-# if __name__ == '__main__':
-#     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-#     parser.add_argument('tweet_result')
-#     args = parser.parse_args()
-#
-#     print(analyze(args.tweet_result))
+        return "Go for it!"

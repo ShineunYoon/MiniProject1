@@ -16,7 +16,7 @@ def form():
 def index():
     choice = request.form['option']
     twitter_sentiment_analysis.get_tweets(choice, 10)
-    result = sentiment_analysis.analyze("tweet.text")
+    result = sentiment_analysis.analyze("tweet.text", 10)
     return render_template('result.html', choice=choice, result=result)
 
 if __name__ == "__main__":
