@@ -36,13 +36,34 @@ The App is designed to be used by shoe retailers to track user reviews of brands
 
 ### User Interface Design for main user story if required
 
+In the beginning of this project, this application was intended to obtain a large selection of shoe product. However, there wasn't enough time to learn and build a database to work on Flask. Therefore, our app ended up having few choices. These choices were implemented as a button, in order for user to analyze easily in visually attractive way.
+Moreover, the app includes responsive design, which led user to access anywhere on their smartphone and the computers.
+
+
 ## System Design and how your design addresses your user stories.
 
+
+
+
 ## READM of how to build your system.
+
+1. Run the /Miniproject1/main.py on the terminal
+2. From http://127.0.0.1:5000, it is possible to see the app running
+
 
 ## Testing
 ### Test document providing how each test case addresses the user stories
 ### Result of testing (screen shots, etc.)
+<img src="./screenshot01.png" width="50%" position="float">
+[Main Page]
+
+Using buttons, the user can select the item that he/she wants to see the overall review on
+
+<img src="./screenshot02.png" width="50%">
+[Analysis Result]
+
+With Sentimental Analysis, this application analyses the reliability.
+
 
 ## Lessons learned
 ### What you liked doing?
