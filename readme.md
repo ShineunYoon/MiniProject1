@@ -42,7 +42,17 @@ Moreover, the app includes responsive design, which led user to access anywhere 
 
 ## System Design and how your design addresses your user stories.
 
+In this app, the two main criteria of the analysis are:
 
+ 1. Reliability <Highly Reliable/Less Reliable/Unreliable>
+ 1. Score <Highly Recommended/Recommended/Less Considerable/Not Recommended>
+
+<img src="./screenshot03.png" width="50%">
+
+This app runs through tweepy api twice to obtain recent tweets. Since the result of the tweepy api is on timely bases, we could expect the differences between long-term and short-term data. Which leads to the "Reliability", how much the data changed throughout the time. 
+In addition, we obtained the sentimental score using Google Natural API. Then, the average of long-term and short-term data 
+has taken. The most challenging part was to find an appropriate threshold for the result. This is because the sentiment score has been changed due to the abnormal data (such as advertisements). To avoid this problem, we have tested the data 10 times each to obtain the most accurate one.
+From this application, first and seventh user stories could be explained. This app could successfully help the users who wants to know the Likes/Dislikes of the certain product with reliability information.
 
 
 ## READM of how to build your system.
