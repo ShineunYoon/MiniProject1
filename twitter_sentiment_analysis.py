@@ -1,4 +1,5 @@
 import tweepy
+import sys
 import re
 
 #
@@ -12,9 +13,10 @@ def get_tweets(*args):
    tweets = tweepy.Cursor(api.search,q=args[0],lang='en').items(args[1])
    for tweet in tweets:
       text = re.sub(r'\w+:\/{2}[\d\w-]+(\.[\d\w-]+)*(?:(?:\/[^\s/]*))*', '', tweet.text)
-      file.write(text)
-      file.write('\n')
+      if text is not "":
+         file.write(text)
+         file.write('\n')
    file.close()
 
-# if __name__ == "__main__":
-#     get_tweets("nike",10)
+if __name__ == "__main__":
+    get_tweets("nike",10)
