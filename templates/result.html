@@ -1,7 +1,9 @@
 {% extends 'base.html'%}
 
 {% block div %}
-<h3>Your choice: {{ choice.upper() }}</h3>
+<h2>{{ choice.upper() }}</h2>
 <br/>
-<h4>{{ result }}</h4>
+<h2>{{ overall_score }}</h2>
+<h2>This result is {{ overall_reliability }}</h2>
+
 {% endblock %}

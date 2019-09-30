@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 import twitter_sentiment_analysis
 import sentiment_analysis
-from wtforms import Form, StringField, RadioField, SubmitField
-from wtforms.validators import DataRequired
+import overall_scorer
 
 app = Flask(__name__)
 
@@ -15,9 +14,18 @@ def form():
 @app.route('/', methods=['POST'])
 def index():
     choice = request.form['option']
-    twitter_sentiment_analysis.get_tweets(choice, 10)
-    result = sentiment_analysis.analyze("tweet.text")
-    return render_template('result.html', choice=choice, result=result)
+    # First Long-term Analysis
+    twitter_sentiment_analysis.get_tweets(choice, 20)
+    result1 = sentiment_analysis.analyze("tweet.text")
+
+    # Second Short-term analysis
+    twitter_sentiment_analysis.get_tweets(choice, 5)
+    result2 = sentiment_analysis.analyze("tweet.text")
+
+    # Overall Score
+    overall_reliability = overall_scorer.isReliable(result1, result2)
+    overall_score = overall_scorer.scorer(result1, result2)
+    return render_template('result.html', choice=choice, overall_reliability=overall_reliability, overall_score=overall_score )
 
 if __name__ == "__main__":
     app.run(debug=True)
