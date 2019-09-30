@@ -14,7 +14,7 @@ def form():
 
 @app.route('/', methods=['POST'])
 def index():
-    choice = request.form['text']
+    choice = request.form['option']
     twitter_sentiment_analysis.get_tweets(choice, 10)
     result = sentiment_analysis.analyze("tweet.text")
     return render_template('result.html', choice=choice, result=result)
